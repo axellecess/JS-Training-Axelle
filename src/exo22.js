@@ -12,8 +12,10 @@ export { compose } from "./exo21";
 // HINT: fn.length returns the number of arguments in the function signature
 export const curry = (fn, ...savedArgs) => {
     // if I have all the arguments, call fn with these arguments
+    if (savedArgs.length >= fn.length) return fn(...savedArgs);
 
     // otherwise, return another function that will take the remaining arguments
+    return (...args) => curry(fn, ...savedArgs, ...args);
 }
 
 export const where = curry(oldWhere)
