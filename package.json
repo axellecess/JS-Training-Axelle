@@ -6,9 +6,9 @@
     "type": "git",
     "url": "https://github.com/worldline/JS-Training.git"
   },
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
